@@ -5,7 +5,7 @@ class mainScene {
     preload() {
         // This method is called once at the beginning
         // It will load all the assets, like sprites and sounds  
-        this.load.image('player', 'assets/steve.jpg');
+        this.load.image('player', 'assets/player.png');
     }
     create() {
         // This method is called once, just after preload()
@@ -19,16 +19,16 @@ class mainScene {
         // Handle horizontal movements
         if (this.arrow.right.isDown) {
             // If the right arrow is pressed, move to the right
-            this.player.x += 3;
+            this.player.x += 2;
         } else if (this.arrow.left.isDown) {
             // If the left arrow is pressed, move to the left
-            this.player.x -= 3;
+            this.player.x -= 2;
         }
         // Do the same for vertical movements
         if (this.arrow.down.isDown) {
-            this.player.y += 3;
+            this.player.y += 2;
         } else if (this.arrow.up.isDown) {
-            this.player.y -= 3;
+            this.player.y -= 2;
         }
     }
 }
@@ -36,7 +36,7 @@ class mainScene {
 new Phaser.Game({
     width: 700, // Width of the game in pixels
     height: 400, // Height of the game in pixels
-    backgroundColor: '#3498db', // The background color (blue)
+    backgroundColor: '#2498db', // The background color (blue)
     scene: mainScene, // The name of the scene we created
     physics: { default: 'arcade' }, // The physics engine to use
     parent: 'game', // Create the game inside the <div id="game"> 
